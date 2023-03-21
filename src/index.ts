@@ -1,5 +1,4 @@
 import { Context, Schema, Service } from "koishi";
-import axios from "axios";
 
 class Alapi extends Service {
   _queue: (() => void)[];
@@ -28,13 +27,13 @@ class Alapi extends Service {
     const promise = new Promise<any>((resolve, reject) => {
       this._queue.push(() => {
         const url = `https://v2.alapi.cn/api/${api}`;
-        axios
+        this.ctx.http
           .get(url, {
             params: params,
           })
           .then((value) => {
-            if (value.data.code !== 200) reject(new Error(value.data.msg));
-            resolve(value.data);
+            if (value.code !== 200) reject(new Error(value.msg));
+            resolve(value);
           })
           .catch((reason) => reject(reason));
       });
