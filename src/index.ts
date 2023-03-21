@@ -6,7 +6,7 @@ class Alapi extends Service {
   _timer: NodeJS.Timer | undefined;
 
   constructor(ctx: Context) {
-    super(ctx, "alapi");
+    super(ctx, "alapi", true);
     this._queue = [];
     this._timer = undefined;
   }
