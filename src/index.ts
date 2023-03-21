@@ -69,4 +69,10 @@ namespace Alapi {
   });
 }
 
+declare module 'koishi' {
+  interface Context {
+    alapi: Alapi
+  }
+}
+
 export default Alapi;
