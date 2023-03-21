@@ -12,6 +12,11 @@
     "TTsdzb <ttsdzb@outlook.com>"
   ],
   "license": "MIT",
+  "homepage": "https://github.com/TTsdzb/koishi-plugin-alapi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TTsdzb/koishi-plugin-alapi.git"
+  },
   "scripts": {},
   "keywords": [
     "chatbot",
