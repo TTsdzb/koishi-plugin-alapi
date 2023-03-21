@@ -10,6 +10,18 @@
 
 这个插件只负责向 Alapi 请求数据，它本身并没有提供任何命令。如果你想通过 bot 使用 API 中的功能，你需要其他的一些插件。
 
+## 使用
+
+你需要注册一个 [Alapi](https://alapi.cn) 账号并获取自己的 token，填入该插件的配置中。其他插件调用服务时，就不需要再配置 token。
+
+或者你也可以手动配置，将下面的内容写入到 `koishi.yml` 的 `plugins` 中：
+
+```yml
+alapi:
+  token: lCti0D5ZS5MoVZtU  # 你的API token
+  qps: 0.5  # 请求速率限制，即每秒请求数，默认为0.5，即两秒一次
+```
+
 ## 如何调用
 
 ```typescript
