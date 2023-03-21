@@ -65,7 +65,7 @@ namespace Alapi {
 
   export const Config: Schema<Config> = Schema.object({
     token: Schema.string().description("账户的API Token").required(),
-    qps: Schema.number().description("每秒请求数，用于限制请求速度").default(2),
+    qps: Schema.number().description("每秒请求数，用于限制请求速度").default(0.5),
   });
 }
 
